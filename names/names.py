@@ -38,18 +38,6 @@ class BinarySearchTree:
             return False
           current = current.left
 
-    # if target == self.value:
-    #     return True
-    # elif target < self.value:
-    #     if self.left is not None: 
-    #         self.left.contains(target)
-    #     else: 
-    #         return False
-    # elif target > self.value:
-    #     if self.right is not None: 
-    #         self.right.contains(target)
-    #     else:
-    #         return False
 
 start_time = time.time()
 
@@ -79,11 +67,11 @@ f.close()
 #         duplicates.append(name_2)
 
 #---second attempt. runtime is around 0.01
-# dictionaryList = {key:1 for key in names_1}
-# duplicates = [name_2 for name_2 in names_2 if name_2 in dictionaryList]
+dictionaryList = {key for key in names_1}
+duplicates = [name_2 for name_2 in names_2 if name_2 in dictionaryList]
 
 #---stretch. only use an array. runtime is around 1s
-duplicates = [name_2 for name_2 in names_2 if name_2 in names_1]
+# duplicates = [name_2 for name_2 in names_2 if name_2 in names_1]
 
 
 
